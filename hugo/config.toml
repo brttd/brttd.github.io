@@ -3,9 +3,10 @@ languageCode = "en-gb"
 title = "Brett Doyle | Programmer"
 author = "Brett Doyle"
 
+publishDir = "../"
+
 disableKinds = ["taxonomy", "taxonomyTerm", "RSS", "sitemap"]
 
 [imaging]
 resampleFilter = "Lanczos"
 quality = 89
-
