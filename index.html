@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	<meta name="generator" content="Hugo 0.54.0" />
+        <meta id="theme-color" name="theme-color" content="hsl(0,80%,60%)">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+        <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett"/>
+
+<meta name="description" content="Brett Doyle, a 20 year old programmer in Hampton, London, UK"/>
+<meta name="author" content="Brett Doyle"/>
+<title>Brett Doyle | Programmer</title>
+
+<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+
+<link href="https://fonts.googleapis.com/css?family=Dosis|Oswald:300&display=swap" rel="stylesheet">
+
+<meta name="og:title" content="Brett Doyle | Programmer"/>
+<meta name="og:type" content="website"/>
+<meta name="og:url" content="https://brttd.github.io"/>
+        
+        
+
+
+
+
+    
+
+
+
+
+
+    
+    
+        <link rel="stylesheet" href="/css/homepage.min.d47ab83a86af3ec424aa4286bd7d20e5ac975b2753b3f03bcbba71a95170ae6c.css">
+    
+
+    </head>
+    <body>
+        <main>
+            <canvas
+    id="canvas"
+    style="position: fixed; top: 0; left: 0; z-index: -1; opacity: 0; transition: opacity 1s"
+></canvas>
+<script>
+var background_scripts = [
+    
+        
+
+        
+            
+            "/js/backgrounds/arches.min.9c9797596be6ed453895271a14880efd7cb304714abfbfd471e4c05bc51569f7.js",
+        
+    
+        
+
+        
+            
+            "/js/backgrounds/flowingArcs.min.81412ca3c7f1e1ec3f2b46028d8abd29f2d6c41ced8ffc2be6701fa5dc70f7fa.js",
+        
+    
+        
+
+        
+            
+            "/js/backgrounds/pixelGrid.min.6f1775a801dd970472f60df2f70a07c5d152328081911cc9320d010fb8baaf5a.js",
+        
+    
+        
+
+        
+            
+            "/js/backgrounds/shiftingTriangleGrid.min.d20e27e34ba90a1513bb1e0e7c2c6362294ec498e3d2913a7d7ad16535f4db94.js",
+        
+    
+]
+
+
+var splash=document.querySelector('main')
+var canvas=document.getElementById('canvas')
+var ctx=canvas.getContext('2d')
+var min_light=90
+var max_light=100
+var grey='hsl(0, 0%, '+min_light+'%)'
+var w,h,max_w,max_h
+var retain_on_resize=false
+var temp_image_data=false
+if(splash.offsetWidth>splash.offsetHeight){background_scripts.concat(['cube'])}
+function updateCanvasSize(){if(retain_on_resize){temp_image_data=ctx.getImageData(0,0,w,h)}
+if(splash.offsetWidth>max_w){w=canvas.width=splash.offsetWidth}
+if(splash.offsetHeight>max_h){h=canvas.height=splash.offsetHeight}
+if(w>max_w||h>max_h){max_w=w
+max_h=h
+if(retain_on_resize){ctx.putImageData(temp_image_data,0,0)
+temp_image_data=false}
+if(typeof onCanvasSizeChange=='function'){onCanvasSizeChange()}}
+canvas.style.left=~~((splash.offsetWidth-w)/2)+'px'
+canvas.style.top=~~((splash.offsetHeight-h)/2)+'px'}
+window.onload=function(){max_w=w=canvas.width=splash.offsetWidth
+max_h=h=canvas.height=splash.offsetHeight
+window.addEventListener('resize',updateCanvasSize)
+var script=document.createElement('script')
+script.src=background_scripts[Math.round(Math.random()*(background_scripts.length-1))]
+if(background_scripts.indexOf(location.search.split('=').pop().split('?').pop())!=-1){script.src='backgrounds/'+
+location.search.split('=').pop().split('?').pop()+
+'.js'}
+script.onload=function(){canvas.style.opacity='1'}
+document.body.appendChild(script)}
+</script>
+            <article>
+                <img id="picture" src="/images/profile_hu560cf2a4e02530661dde7a70ae0d08fc_193760_250x250_fill_q90_lanczos_smart1.jpg" alt="My face"></img>
+                <div id="info">
+                    <h1>Brett Doyle</h1>
+                    
+                    <div id="bio">
+                        I'm <a href="#" class="highlight">
+                            <label for="show-bio-more">
+                                <span id="age">
+                                    20
+                                </span>
+                                <span class="underline"></span>
+                            </label>
+                        </a>. I'm a <a href="/work" class="highlight">
+    <span>Programmer</span>
+    <span class="underline"></span>
+</a> and <a href="https://brettdoyle.art" class="highlight">
+    <span>3D Artist</span>
+    <span class="underline"></span>
+</a>.
+                    <input type="checkbox" id="show-bio-more" style="display: none;">
+                    <p>I live in Hampton, London.<br />
+I&rsquo;ve been interested in programming (and art) for a long time.
+I mainly use JavaScript, both browser-side and Node.js.
+I also know Python and a little bit of Java.</p>
+
+                    </div>
+                    <p>
+                        You can find me on
+                        <a href="https://github.com/brttd" class="highlight">
+    <span>GitHub</span>
+    <span class="underline"></span>
+</a> and <a href="https://codepen.io/brttd/" class="highlight">
+    <span>CodePen</span>
+    <span class="underline"></span>
+</a>
+                        <br>
+                        Or email me at <a href="mailto:brettdoyle@protonmail.com" class="highlight">
+    <span>brettdoyle@protonmail.com</span>
+    <span class="underline"></span>
+</a>.
+                    </p>
+                </div>
+            </article>
+        </main>
+        
+
+
+    
+
+
+
+
+
+    
+
+    <script src="/js/homepage/colors.min.d22ea8ea21903c06fb375369d9ca08627834bc5220ab8b179c65d9950d69fcf4.js"></script>
+
+        <script>
+            var date = new Date()
+            date = date.getFullYear() + date.getMonth() * 0.1
+            
+            age.textContent = Math.floor(date - 1998.7)
+            
+            if (Math.floor(date - 1998.7) <  20 ) {
+                age.textContent += ' at your device time'
+            
+                var ageInfo = document.createElement('span')
+                ageInfo.textContent =
+                    " (Your device time is wrong. I'm actually 20)"
+            
+                age.parentNode.parentNode.parentNode.insertBefore(ageInfo, age.parentNode.parentNode.nextSibling)
+            }
+        </script>
+    </body>
+</html>
