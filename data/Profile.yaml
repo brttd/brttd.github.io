@@ -1,0 +1,10 @@
+name: Brett Doyle
+age: 20
+email: brettdoyle@protonmail.com
+art_website: https://brettdoyle.art
+image: profile.jpg
+links:
+    - name: GitHub
+      url: https://github.com/brttd
+    - name: CodePen
+      url: https://codepen.io/brttd/

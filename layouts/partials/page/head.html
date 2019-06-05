@@ -1,0 +1,17 @@
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett"/>
+
+<meta name="description" content="{{ .Description }}"/>
+<meta name="author" content="{{ .Site.Data.Profile.name }}"/>
+<title>{{- .Title | default .Site.Title -}}</title>
+
+<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+
+<link href="https://fonts.googleapis.com/css?family=Dosis|Oswald:300&display=swap" rel="stylesheet">
+
+<meta name="og:title" content="{{- .Title | default .Site.Title -}}"/>
+<meta name="og:type" content="website"/>
+<meta name="og:url" content="{{ .Site.BaseURL }}"/>

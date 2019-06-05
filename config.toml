@@ -1,0 +1,11 @@
+baseURL = "https://brttd.github.io"
+languageCode = "en-gb"
+title = "Brett Doyle | Programmer"
+author = "Brett Doyle"
+
+disableKinds = ["taxonomy", "taxonomyTerm", "RSS", "sitemap"]
+
+[imaging]
+resampleFilter = "Lanczos"
+quality = 89
+

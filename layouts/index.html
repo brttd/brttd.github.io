@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta id="theme-color" name="theme-color" content="hsl(0,80%,60%)">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+        {{ partial "page/head" . }}
+        
+        {{ partial "stylesheet" "homepage" }}
+    </head>
+    <body>
+        <main>
+            {{ partial "page/background" . }}
+            <article>
+                <img id="picture" src="{{ ((resources.Get "images/profile.jpg").Fill "250x250 q90").RelPermalink }}" alt="My face"></img>
+                <div id="info">
+                    <h1>{{ .Site.Data.Profile.name }}</h1>
+                    
+                    <div id="bio">
+                        I'm <a href="#" class="highlight">
+                            <label for="show-bio-more">
+                                <span id="age">
+                                    {{ .Site.Data.Profile.age }}
+                                </span>
+                                <span class="underline"></span>
+                            </label>
+                        </a>. I'm a {{ partial "link" (dict "name" "Programmer" "url" "/work") }} and {{ partial "link" (dict "name" "3D Artist" "url" .Site.Data.Profile.art_website) }}.
+                    <input type="checkbox" id="show-bio-more" style="display: none;">
+                    {{ .Content }}
+                    </div>
+                    <p>
+                        You can find me on
+                        {{ $links:= apply .Site.Data.Profile.links "partial" "link" "."}}
+                        {{ delimit $links ", " " and " }}
+                        <br>
+                        Or email me at {{ partial "link" (dict "name" .Site.Data.Profile.email "url" (printf "%s%s" "mailto:" .Site.Data.Profile.email) ) }}.
+                    </p>
+                </div>
+            </article>
+        </main>
+        {{ partial "script" "homepage/colors" }}
+        <script>
+            var date = new Date()
+            date = date.getFullYear() + date.getMonth() * 0.1
+            
+            age.textContent = Math.floor(date - 1998.7)
+            
+            if (Math.floor(date - 1998.7) < {{ .Site.Data.Profile.age }}) {
+                age.textContent += ' at your device time'
+            
+                var ageInfo = document.createElement('span')
+                ageInfo.textContent =
+                    " (Your device time is wrong. I'm actually {{ .Site.Data.Profile.age }})"
+            
+                age.parentNode.parentNode.parentNode.insertBefore(ageInfo, age.parentNode.parentNode.nextSibling)
+            }
+        </script>
+    </body>
+</html>

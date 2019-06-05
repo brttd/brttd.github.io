@@ -1,0 +1,15 @@
+{{ $scratch := newScratch }}
+
+{{ if eq (printf "%T" .) "string" }}
+    {{ $scratch.Set "script" . }}
+{{ else }}
+    {{ $scratch.Set "script" .Script }}
+{{ end }}
+
+{{ $path := print "js/" ( $scratch.Get "script" ) ".js" }}
+
+{{ if fileExists (print "assets/" $path) }}
+    {{ $script := resources.Get $path | resources.Minify }}
+
+    <script src="{{ ($script | resources.Fingerprint ).RelPermalink }}"></script>
+{{ end }}
