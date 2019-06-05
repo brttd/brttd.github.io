@@ -30,8 +30,7 @@
                     </div>
                     <p>
                         You can find me on
-                        {{ $links:= apply .Site.Data.Profile.links "partial" "link" "."}}
-                        {{ delimit $links ", " " and " }}
+                        {{ delimit (apply .Site.Data.Profile.links "partial" "link" ".") ", " " and " }}
                         <br>
                         Or email me at {{ partial "link" (dict "name" .Site.Data.Profile.email "url" (printf "%s%s" "mailto:" .Site.Data.Profile.email) ) }}.
                     </p>
