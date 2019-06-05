@@ -1,3 +1,57 @@
+body {
+  font-size: 19px;
+  font-size: 1.2rem;
+  font-size: calc(0.7rem + 0.7vw);
+  font-family: 'Dosis', 'Candara', sans-serif;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2em;
+  font-family: 'Oswald', sans-serif;
+  font-weight: normal;
+}
+
+p {
+  margin: 0;
+  margin-bottom: 1em;
+}
+
+a,
+.highlight {
+  color: #e61a1a;
+}
+
+a {
+  display: inline-block;
+  padding: 0 3px;
+  padding: 0 0.2em;
+  margin: -3px;
+  margin: -0.2em;
+  text-decoration: none;
+  outline: none;
+}
+a .underline {
+  display: block;
+  width: 0;
+  margin: 0 auto;
+  min-height: 2px;
+  height: 2px;
+  height: 0.1rem;
+  -webkit-transition: width 0.2s;
+  transition: width 0.2s;
+  background: currentColor;
+}
+a:hover .underline, a:focus .underline, a:active .underline {
+  width: 100%;
+}
+a:focus {
+  background: currentColor;
+}
+a:focus span {
+  color: white;
+}
+
 html,
 body {
   width: 100%;
@@ -59,19 +113,20 @@ main article {
   padding: 30px;
   padding: 2vw;
   text-align: center;
-  font-size: 19px;
-  font-size: 1.2rem;
-  font-size: calc(0.7rem + 0.7vw);
+  color: #646464;
 }
-main article #picture,
-main article #info {
+main h1 {
+  color: black;
+}
+main #bio {
+  font-size: 1.3em;
+  margin-bottom: 0.76em;
+}
+main #picture,
+main #info {
   vertical-align: middle;
 }
-main article p {
-  margin: 0;
-  margin-bottom: 1em;
-}
-main article #picture {
+main #picture {
   display: block;
   margin: 0 auto;
   width: 60%;
@@ -79,76 +134,30 @@ main article #picture {
   max-width: 12em;
   border-radius: 100%;
 }
-main article #info {
+main #info {
   display: inline-block;
   padding: 9px;
   padding: 0.6em;
   white-space: normal;
   max-width: 50ch;
-  font-family: 'Dosis', 'Candara', sans-serif;
-  color: #646464;
-}
-main article #info a,
-main article #info .highlight {
-  color: #e61a1a;
-}
-main article #info a {
-  display: inline-block;
-  padding: 0 3px;
-  padding: 0 0.2em;
-  margin: -3px;
-  margin: -0.2em;
-  text-decoration: none;
-  outline: none;
-}
-main article #info a .underline {
-  display: block;
-  width: 0;
-  margin: 0 auto;
-  min-height: 2px;
-  height: 2px;
-  height: 0.1rem;
-  -webkit-transition: width 0.2s;
-  transition: width 0.2s;
-  background: currentColor;
-}
-main article #info a:hover .underline, main article #info a:focus .underline, main article #info a:active .underline {
-  width: 100%;
-}
-main article #info a:focus {
-  background: currentColor;
-}
-main article #info a:focus span {
-  color: white;
-}
-main article #info h1 {
-  margin: 0;
-  font-size: 2em;
-  font-family: 'Oswald', sans-serif;
-  font-weight: normal;
-  color: black;
-}
-main article #info #bio {
-  font-size: 1.3em;
-  margin-bottom: 0.76em;
 }
 
 @media (orientation: landscape) {
   main article {
     white-space: nowrap;
   }
-  main article #picture {
+  main #picture {
     display: inline-block;
   }
-  main article #info {
+  main #info {
     text-align: left;
   }
 }
 @media (min-width: 4000px) {
-  main article #picture {
+  main #picture {
     height: calc(9.1rem + 364px);
   }
-  main article #info {
+  main #info {
     font-size: calc(0.7rem + 28px);
   }
 }
