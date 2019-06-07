@@ -1,6 +1,8 @@
 ---
 title: Brett Doyle | Programmer
 description: Brett Doyle, a 20 year old programmer in Hampton, London, UK
+menu: main
+linkTitle: Homepage
 ---
 I live in Hampton, London.  
 I've been interested in programming (and art) for a long time.

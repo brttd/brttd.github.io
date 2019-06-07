@@ -1,0 +1,13 @@
+{{ define "head" }}
+    {{ partial "stylesheet" "project-list" }}
+{{ end }}
+
+{{ define "main" }}
+    <ul>
+        {{ range .Pages }}
+            {{ partial "project/summary" . }}
+        {{ end }}
+    </ul>
+
+    {{ partial "script" "colors" }}
+{{ end }}

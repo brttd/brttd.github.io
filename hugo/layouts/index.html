@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta id="theme-color" name="theme-color" content="hsl(0,80%,60%)">
-        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-
         {{ partial "page/head" . }}
         
         {{ partial "stylesheet" "homepage" }}
@@ -17,14 +14,14 @@
                     <h1>{{ .Site.Data.Profile.name }}</h1>
                     
                     <div id="bio">
-                        I'm <a href="#" class="highlight">
+                        I'm <a href="#">
                             <label for="show-bio-more">
                                 <span id="age">
                                     {{ .Site.Data.Profile.age }}
                                 </span>
                                 <span class="underline"></span>
                             </label>
-                        </a>. I'm a {{ partial "link" (dict "name" "Programmer" "url" "/work") }} and {{ partial "link" (dict "name" "3D Artist" "url" .Site.Data.Profile.art_website) }}.
+                        </a>. I'm a {{ partial "link" (dict "name" "Programmer" "url" "/projects") }} and {{ partial "link" (dict "name" "3D Artist" "url" .Site.Data.Profile.art_website) }}.
                     <input type="checkbox" id="show-bio-more" style="display: none;">
                     {{ .Content }}
                     </div>
@@ -37,7 +34,13 @@
                 </div>
             </article>
         </main>
-        {{ partial "script" "homepage/colors" }}
+        <ul id="projects">
+            <h1 class="heading">Projects</h1>
+            {{ range .Site.RegularPages }}
+                {{ partial "project/summary" . }}
+            {{ end }} 
+        </ul>
+        {{ partial "script" "colors" }}
         <script>
             var date = new Date()
             date = date.getFullYear() + date.getMonth() * 0.1

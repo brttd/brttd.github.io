@@ -1,0 +1,20 @@
+{{ define "head" }}
+    {{ partial "stylesheet" "project-single" }}
+{{ end }}
+
+{{ define "main" }}
+    <header>
+        <h1>{{ .Name }}</h1>
+        {{ with .Params.links }}
+            <ul class="links">
+                {{ range . }}
+                    <li>
+                        {{ partial "link" . }}
+                    </li>    
+                {{ end }}
+            </ul>
+        {{ end }}
+    </header>
+    {{ .Content }}
+    {{ partial "script" "colors" }}
+{{ end }}

@@ -1,4 +1,4 @@
-var _colorArr = document.querySelectorAll('.highlight')
+var _colorArr = document.querySelectorAll('a, .highlight')
 var _themeColor = document.getElementById('theme-color')
 
 var hue = 0

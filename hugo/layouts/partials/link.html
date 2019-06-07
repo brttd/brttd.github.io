@@ -1,4 +1,4 @@
-<a href="{{ .url }}" class="highlight">
+<a href="{{ .url }}" class="special{{ with .class }} {{ . }}{{ end }}">
     <span>{{ .name }}</span>
     <span class="underline"></span>
 </a>

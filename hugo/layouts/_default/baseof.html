@@ -2,8 +2,26 @@
 <html lang="en">
     <head>
         {{ partial "page/head" . }}
+        
+        {{ block "head" . }}{{ end }}
     </head>
     <body>
+        <header id="global">
+            <nav>
+                {{ $currentPage := . }}
+                
+                {{ $menuName := "main" }}
+                {{ $menu := index .Site.Menus $menuName }}
+            
+                {{ range .Site.Menus.main }}
+                    {{if or ($currentPage.IsMenuCurrent $menuName .) ($currentPage.HasMenuCurrent $menuName .) }}
+                        {{ partial "link" (dict "name" .Name "url" .URL "class" "active") }}
+                    {{ else }}
+                        {{ partial "link" (dict "name" .Name "url" .URL) }}
+                    {{ end }}
+                {{ end }}
+            </nav>
+        </header>
         <main>{{ block "main" . }}{{ end }}</main>
     </body>
 </html>

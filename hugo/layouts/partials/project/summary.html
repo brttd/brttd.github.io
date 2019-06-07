@@ -1,0 +1,17 @@
+<article class="summary">
+    <header>
+        <h1>
+            {{ partial "link" (dict "name" .Title "url" .Permalink ) }}
+        </h1>
+        {{ with .Params.links }}
+            <ul class="links">
+                {{ range . }}
+                    <li>
+                        {{ partial "link" . }}
+                    </li>    
+                {{ end }}
+            </ul>
+        {{ end }}
+    </header>
+    {{ .Summary }}
+</article>

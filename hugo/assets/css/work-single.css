@@ -1,0 +1,175 @@
+@charset "UTF-8";
+body {
+  font-size: 19px;
+  font-size: 1.2rem;
+  font-size: calc(0.7rem + 0.7vw);
+  font-family: 'Dosis', 'Candara', sans-serif;
+  color: #0e0e15;
+}
+
+::-moz-selection {
+  background: black;
+  color: white;
+}
+
+::selection {
+  background: black;
+  color: white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  font-family: 'Oswald', sans-serif;
+  font-weight: normal;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+p {
+  margin: 0;
+  margin-bottom: 1em;
+}
+
+a,
+.highlight {
+  color: #e61a1a;
+}
+
+a {
+  display: inline-block;
+  padding: 0 3px;
+  padding: 0 0.2em;
+  margin: -3px;
+  margin: -0.2em;
+  text-decoration: none;
+  outline: none;
+}
+a:hover, a:focus, a:active {
+  text-decoration: underline;
+}
+a.special .underline {
+  display: block;
+  position: relative;
+  top: -0.15em;
+  width: 0;
+  margin: 0 auto;
+  min-height: 2px;
+  height: 0.1em;
+  -webkit-transition: width 0.2s;
+  transition: width 0.2s;
+  background: currentColor;
+}
+a.special:hover, a.special:focus, a.special:active, a.special.active {
+  text-decoration: none;
+}
+a.special:hover .underline, a.special:focus .underline, a.special:active .underline, a.special.active .underline {
+  width: 100%;
+}
+a.special:focus {
+  background: currentColor;
+}
+a.special:focus span {
+  color: white;
+}
+
+header#global {
+  background: white;
+  padding: 1em;
+  text-align: center;
+  border-bottom: 0.1em solid #5a5a6d;
+}
+header#global nav a {
+  margin: 0 1em;
+}
+
+article.summary .links {
+  display: block;
+}
+article.summary .links li {
+  display: inline-block;
+  margin-right: 0.5em;
+}
+article.summary .links li::before {
+  content: '⚬';
+  vertical-align: middle;
+}
+article.summary .links li a {
+  vertical-align: middle;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  margin: 0 auto;
+  padding: 1.5em;
+  padding-top: 0;
+  max-width: 60ch;
+}
+main header {
+  margin-bottom: 1em;
+  padding: 0.5em;
+  text-align: center;
+  border-bottom: 0.1em solid #5a5a6d;
+}
+main header .links {
+  display: block;
+}
+main header .links li {
+  display: inline-block;
+  margin-right: 0.5em;
+}
+main header .links li::before {
+  content: '⚬';
+  vertical-align: middle;
+}
+main header .links li a {
+  vertical-align: middle;
+}
+
+iframe {
+  border: none;
+  outline: none;
+  width: 100%;
+}
+
+image,
+iframe,
+.responsive-iframe {
+  width: calc(100% + 2em);
+  margin: 0 -1em;
+}
+
+.responsive-iframe {
+  position: relative;
+  overflow: hidden;
+  padding-top: 56.25%;
+  padding-top: calc(100% / (1vw / 1vh));
+}
+.responsive-iframe iframe {
+  position: absolute;
+  top: 0;
+  width: 125%;
+  height: 125%;
+  margin: 0;
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
