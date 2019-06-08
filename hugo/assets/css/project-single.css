@@ -7,6 +7,10 @@ body {
   color: #0e0e15;
 }
 
+main {
+  display: block;
+}
+
 ::-moz-selection {
   background: black;
   color: white;
