@@ -11,7 +11,7 @@ links:
 ---
 My personal websites, for 3D art and programming. Both are responsive desktop/mobile sites, serving as a info + portfolio website.
 <!--more-->
-[brettdoyle.art](https://brettdoyle.art) has a portfolio of digital 3D work of mine, and [brttd.github.io](https://brttd.github.io) has a collection of different programming projects I've created.  
+[brettdoyle.art](https://brettdoyle.art) is a portfolio of my digital 3D work, and [brttd.github.io](https://brttd.github.io) is a collection of different programming projects I've created.  
 The sites are built with [Hugo](https://gohugo.io/). I'd not used Hugo before, but wanted to use a static site generator to make development quicker and easier.
 
 <div class="responsive-iframe website" data-url="brettdoyle.art"><iframe src="https://brettdoyle.art"></iframe></div>  
