@@ -167,6 +167,56 @@ iframe,
   -webkit-transform: scale(0.8);
           transform: scale(0.8);
 }
+.responsive-iframe.website {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 0.5em;
+  width: calc(100% + 6em);
+  margin: 0 -3em;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  /* offset-x | offset-y | blur-radius | spread-radius | color */
+  -webkit-box-shadow: 1px 2px 8px 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 1px 2px 8px 3px rgba(0, 0, 0, 0.2);
+}
+.responsive-iframe.website::before {
+  content: '🗕 🗖 🗙';
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  height: 2em;
+  height: calc(2em + 1px);
+  padding: 0.2em 0.4em;
+  text-align: right;
+  color: #666666;
+  border-bottom: 1px solid #cccccc;
+}
+.responsive-iframe.website::after {
+  content: attr(data-url);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: block;
+  position: absolute;
+  top: 0.2em;
+  left: 0.2em;
+  width: 90%;
+  max-width: calc(100% - 8em);
+  height: 1.6em;
+  padding: 0.1em 0.9em;
+  background: #ededed;
+  border-radius: 0.8em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.responsive-iframe.website iframe {
+  top: 2em;
+  height: calc(125% - 2em);
+}
 
 @media (min-aspect-ratio: 3 / 2) {
   .responsive-iframe {
