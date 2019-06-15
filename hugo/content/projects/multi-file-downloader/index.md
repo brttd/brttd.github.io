@@ -13,9 +13,9 @@ A Chrome extension to quickly download all files linked in a page.
 
 <!--more-->
 
-![Promotional image, with text saying "Multi-File Downloader"](./promo_1400.png)
+![Promotional image, with text saying "Multi-File Downloader"](./promo_920x680.png)
 
 When activated on a page, it scans the page for links and other HTML tags containing file URLs. The user can then filter the files which have been found, and automatically download all chosen files.
 
-![Extension screenshot](screenshot.png)
 ![Extension screenshot](screenshot_2.png)
+![Extension screenshot](screenshot_1.png)
